@@ -7,7 +7,7 @@ The library uses Qt 5 to be platform independent.
 
 The code was taken from [sACNView](https://github.com/docsteer/sacnview) by **Tom Steer** et al. sACNView was released under the **Apache License** and includes code from Electronic Theater Controls released under the **MIT license**.
 
-The only modifications to the sACNView code were to replace the dependency to their preferences system by two simple setter methods (sACNRxSocket::setNetworkInterface() and sACNTxSocket::setNetworkInterface()) and some code style changes.
+The actual commit the code was taken from is [#54110d9](https://github.com/marcusbirkin/sacnview/commit/54110d95c34b65c501dbbae9ae494717aef9fb83) from [PR 149](https://github.com/docsteer/sacnview/pull/149). The only modifications to the code were to replace the dependency to their preferences system by two simple setter methods (sACNRxSocket::setNetworkInterface() and sACNTxSocket::setNetworkInterface()) and some code style changes.
 
 ## Building
 
