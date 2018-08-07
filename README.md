@@ -20,8 +20,15 @@ Add the files of this library to a Qt project to use the library. Qt 5.9.0 or hi
 Setting up the listener:
 
 ```c++
+// ask the user for the network interface to use
+QNetworkInterface your_preferred_interface;
+// setting it for both Rx and Tx:
+sACNRxSocket::setNetworkInterface(your_preferred_interface);
+sACNTxSocket::setNetworkInterface(your_preferred_interface);
+
 int universe = 1;  // universe in range 1-63999
 QSharedPointer<sACNListener> listener = sACNManager::getInstance()->getListener(universe);
+
 connect(listener.data(), SIGNAL(levelsChanged()), this, SLOT(onLevelsChanged()));
 ```
 
